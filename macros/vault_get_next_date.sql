@@ -1,7 +1,7 @@
 {% macro vault_get_next_date() %}
 
     {% set increment_table %} 
-        {{ this.database + '.' + this.schema + '.increment_vault_date' }} 
+        {{ this.database + '.' + this.schema + '.date_increment' }} 
     {% endset %}
     
     {% set date_query %}
