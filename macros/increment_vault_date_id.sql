@@ -1,7 +1,7 @@
 {% macro increment_vault_date_id() %}
 
     {% set increment_table %} 
-        {{ 'analytics.dbt_lbondkennedy.date_increment' }} 
+        {{ target.database}}.{{ target.schema }}.date_increment
     {% endset %}
 
     {% set create_query %}
