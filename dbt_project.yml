@@ -35,8 +35,7 @@ on-run-start:
 
 vars:
   start_date: '1999-01-01'
-  #load_date: '1999-01-11'
-  load_date: "{{ vault_get_next_date() }}"
+  load_date: '1992-01-03'
   tpch_size: '001' #1, 10, 100, 1000, 10000
   test: 'false' # to trigger runs for unit testing - override in a CLI param in testing job
   fct_order_items: 'mock_source__fct_order_items' # this is a map for unit testing
