@@ -1,0 +1,338 @@
+2022-05-02 02:40:06.019190 (MainThread): Running with dbt=1.0.6
+2022-05-02 02:40:06.256416 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt_rpc.task.server.RPCServerTask'>, debug=None, defer=None, exclude=None, fail_fast=None, host='0.0.0.0', log_cache_events=False, log_format=None, models=None, partial_parse=True, port=8580, printer_width=None, profile='user', profiles_dir='/usr/src/develop/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, send_anonymous_usage_stats=None, single_threaded=False, state=None, static_parser=None, target=None, threads=None, use_colors=None, use_experimental_parser=None, vars='{}', version_check=None, warn_error=None, which='rpc', write_json=None)
+2022-05-02 02:40:06.270194 (MainThread): Tracking: tracking
+2022-05-02 02:40:06.271481 (MainThread): 02:40:06  Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f81506dedf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f810c3fd700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f810c3fdc70>]}
+2022-05-02 02:40:06.276156 (MainThread): Serving RPC server at 0.0.0.0:8580, pid=22
+2022-05-02 02:40:06.276420 (MainThread): Supported methods: ['build', 'cli_args', 'compile', 'compile_sql', 'deps', 'docs.generate', 'gc', 'get-manifest', 'kill', 'list', 'poll', 'ps', 'run', 'run-operation', 'run_sql', 'seed', 'snapshot', 'snapshot-freshness', 'source-freshness', 'status', 'test']
+2022-05-02 02:40:06.276596 (MainThread): Send requests to http://localhost:8580/jsonrpc
+2022-05-02 02:40:06.349497 (Thread-12): 02:40:06  Partial parse save file not found. Starting full parse.
+2022-05-02 02:40:06.349764 (Thread-12): 02:40:06  Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f810c3a9550>]}
+2022-05-02 02:40:07.311041 (Thread-12): 02:40:07  Parsing macros/vault_get_next_date.sql
+2022-05-02 02:40:07.314200 (Thread-12): 02:40:07  Parsing macros/udf_area_of_circle.sql
+2022-05-02 02:40:07.314982 (Thread-12): 02:40:07  Parsing macros/limit_data_in_dev.sql
+2022-05-02 02:40:07.315831 (Thread-12): 02:40:07  Parsing macros/convert_money.sql
+2022-05-02 02:40:07.316298 (Thread-12): 02:40:07  Parsing macros/unit_test_mode.sql
+2022-05-02 02:40:07.317469 (Thread-12): 02:40:07  Parsing macros/grant_all_on_schemas.sql
+2022-05-02 02:40:07.318777 (Thread-12): 02:40:07  Parsing macros/standard_account_fields.sql
+2022-05-02 02:40:07.319827 (Thread-12): 02:40:07  Parsing macros/cents_to_dollars.sql
+2022-05-02 02:40:07.320490 (Thread-12): 02:40:07  Parsing macros/create_udfs.sql
+2022-05-02 02:40:07.321064 (Thread-12): 02:40:07  Parsing macros/test_all_values_gte_zero.sql
+2022-05-02 02:40:07.321683 (Thread-12): 02:40:07  Parsing macros/build_dim.sql
+2022-05-02 02:40:07.322741 (Thread-12): 02:40:07  Parsing macros/increment_vault_date_id.sql
+2022-05-02 02:40:07.325272 (Thread-12): 02:40:07  Parsing macros/block_on_tests.sql
+2022-05-02 02:40:07.327009 (Thread-12): 02:40:07  Parsing macros/adapters.sql
+2022-05-02 02:40:07.364491 (Thread-12): 02:40:07  Parsing macros/catalog.sql
+2022-05-02 02:40:07.366297 (Thread-12): 02:40:07  Parsing macros/materializations/table.sql
+2022-05-02 02:40:07.369323 (Thread-12): 02:40:07  Parsing macros/materializations/seed.sql
+2022-05-02 02:40:07.374328 (Thread-12): 02:40:07  Parsing macros/materializations/incremental.sql
+2022-05-02 02:40:07.382643 (Thread-12): 02:40:07  Parsing macros/materializations/merge.sql
+2022-05-02 02:40:07.386344 (Thread-12): 02:40:07  Parsing macros/materializations/snapshot.sql
+2022-05-02 02:40:07.387299 (Thread-12): 02:40:07  Parsing macros/materializations/view.sql
+2022-05-02 02:40:07.388629 (Thread-12): 02:40:07  Parsing macros/adapters/metadata.sql
+2022-05-02 02:40:07.395522 (Thread-12): 02:40:07  Parsing macros/adapters/columns.sql
+2022-05-02 02:40:07.405125 (Thread-12): 02:40:07  Parsing macros/adapters/freshness.sql
+2022-05-02 02:40:07.407943 (Thread-12): 02:40:07  Parsing macros/adapters/persist_docs.sql
+2022-05-02 02:40:07.412207 (Thread-12): 02:40:07  Parsing macros/adapters/relation.sql
+2022-05-02 02:40:07.421469 (Thread-12): 02:40:07  Parsing macros/adapters/schema.sql
+2022-05-02 02:40:07.423606 (Thread-12): 02:40:07  Parsing macros/adapters/indexes.sql
+2022-05-02 02:40:07.426235 (Thread-12): 02:40:07  Parsing macros/get_custom_name/get_custom_schema.sql
+2022-05-02 02:40:07.428657 (Thread-12): 02:40:07  Parsing macros/get_custom_name/get_custom_alias.sql
+2022-05-02 02:40:07.430132 (Thread-12): 02:40:07  Parsing macros/get_custom_name/get_custom_database.sql
+2022-05-02 02:40:07.431683 (Thread-12): 02:40:07  Parsing macros/etc/datetime.sql
+2022-05-02 02:40:07.439848 (Thread-12): 02:40:07  Parsing macros/etc/statement.sql
+2022-05-02 02:40:07.444179 (Thread-12): 02:40:07  Parsing macros/generic_test_sql/unique.sql
+2022-05-02 02:40:07.444945 (Thread-12): 02:40:07  Parsing macros/generic_test_sql/not_null.sql
+2022-05-02 02:40:07.445517 (Thread-12): 02:40:07  Parsing macros/generic_test_sql/accepted_values.sql
+2022-05-02 02:40:07.446853 (Thread-12): 02:40:07  Parsing macros/generic_test_sql/relationships.sql
+2022-05-02 02:40:07.447738 (Thread-12): 02:40:07  Parsing macros/materializations/configs.sql
+2022-05-02 02:40:07.450012 (Thread-12): 02:40:07  Parsing macros/materializations/hooks.sql
+2022-05-02 02:40:07.453777 (Thread-12): 02:40:07  Parsing macros/materializations/models/table/table.sql
+2022-05-02 02:40:07.461113 (Thread-12): 02:40:07  Parsing macros/materializations/models/table/create_table_as.sql
+2022-05-02 02:40:07.463909 (Thread-12): 02:40:07  Parsing macros/materializations/models/view/create_or_replace_view.sql
+2022-05-02 02:40:07.466500 (Thread-12): 02:40:07  Parsing macros/materializations/models/view/helpers.sql
+2022-05-02 02:40:07.467808 (Thread-12): 02:40:07  Parsing macros/materializations/models/view/create_view_as.sql
+2022-05-02 02:40:07.470076 (Thread-12): 02:40:07  Parsing macros/materializations/models/view/view.sql
+2022-05-02 02:40:07.477048 (Thread-12): 02:40:07  Parsing macros/materializations/models/incremental/incremental.sql
+2022-05-02 02:40:07.486865 (Thread-12): 02:40:07  Parsing macros/materializations/models/incremental/on_schema_change.sql
+2022-05-02 02:40:07.501842 (Thread-12): 02:40:07  Parsing macros/materializations/models/incremental/is_incremental.sql
+2022-05-02 02:40:07.503324 (Thread-12): 02:40:07  Parsing macros/materializations/models/incremental/merge.sql
+2022-05-02 02:40:07.514186 (Thread-12): 02:40:07  Parsing macros/materializations/models/incremental/column_helpers.sql
+2022-05-02 02:40:07.518509 (Thread-12): 02:40:07  Parsing macros/materializations/seeds/helpers.sql
+2022-05-02 02:40:07.534304 (Thread-12): 02:40:07  Parsing macros/materializations/seeds/seed.sql
+2022-05-02 02:40:07.540116 (Thread-12): 02:40:07  Parsing macros/materializations/tests/helpers.sql
+2022-05-02 02:40:07.541833 (Thread-12): 02:40:07  Parsing macros/materializations/tests/test.sql
+2022-05-02 02:40:07.546091 (Thread-12): 02:40:07  Parsing macros/materializations/tests/where_subquery.sql
+2022-05-02 02:40:07.547882 (Thread-12): 02:40:07  Parsing macros/materializations/snapshots/helpers.sql
+2022-05-02 02:40:07.559100 (Thread-12): 02:40:07  Parsing macros/materializations/snapshots/strategies.sql
+2022-05-02 02:40:07.575158 (Thread-12): 02:40:07  Parsing macros/materializations/snapshots/snapshot_merge.sql
+2022-05-02 02:40:07.576776 (Thread-12): 02:40:07  Parsing macros/materializations/snapshots/snapshot.sql
+2022-05-02 02:40:07.587992 (Thread-12): 02:40:07  Parsing tests/generic/builtin.sql
+2022-05-02 02:40:07.590918 (Thread-12): 02:40:07  Parsing macros/sql/pivot.sql
+2022-05-02 02:40:07.594902 (Thread-12): 02:40:07  Parsing macros/sql/star.sql
+2022-05-02 02:40:07.598994 (Thread-12): 02:40:07  Parsing macros/sql/get_table_types_sql.sql
+2022-05-02 02:40:07.600287 (Thread-12): 02:40:07  Parsing macros/sql/surrogate_key.sql
+2022-05-02 02:40:07.603608 (Thread-12): 02:40:07  Parsing macros/sql/get_query_results_as_dict.sql
+2022-05-02 02:40:07.605890 (Thread-12): 02:40:07  Parsing macros/sql/date_spine.sql
+2022-05-02 02:40:07.609980 (Thread-12): 02:40:07  Parsing macros/sql/get_column_values.sql
+2022-05-02 02:40:07.615046 (Thread-12): 02:40:07  Parsing macros/sql/groupby.sql
+2022-05-02 02:40:07.616402 (Thread-12): 02:40:07  Parsing macros/sql/get_tables_by_pattern_sql.sql
+2022-05-02 02:40:07.622477 (Thread-12): 02:40:07  Parsing macros/sql/nullcheck_table.sql
+2022-05-02 02:40:07.624111 (Thread-12): 02:40:07  Parsing macros/sql/get_tables_by_prefix_sql.sql
+2022-05-02 02:40:07.625737 (Thread-12): 02:40:07  Parsing macros/sql/get_relations_by_pattern.sql
+2022-05-02 02:40:07.629122 (Thread-12): 02:40:07  Parsing macros/sql/get_relations_by_prefix.sql
+2022-05-02 02:40:07.632451 (Thread-12): 02:40:07  Parsing macros/sql/safe_add.sql
+2022-05-02 02:40:07.634064 (Thread-12): 02:40:07  Parsing macros/sql/haversine_distance.sql
+2022-05-02 02:40:07.639809 (Thread-12): 02:40:07  Parsing macros/sql/unpivot.sql
+2022-05-02 02:40:07.647398 (Thread-12): 02:40:07  Parsing macros/sql/generate_series.sql
+2022-05-02 02:40:07.651585 (Thread-12): 02:40:07  Parsing macros/sql/nullcheck.sql
+2022-05-02 02:40:07.653237 (Thread-12): 02:40:07  Parsing macros/sql/union.sql
+2022-05-02 02:40:07.663226 (Thread-12): 02:40:07  Parsing macros/materializations/insert_by_period_materialization.sql
+2022-05-02 02:40:07.686900 (Thread-12): 02:40:07  Parsing macros/jinja_helpers/pretty_time.sql
+2022-05-02 02:40:07.688162 (Thread-12): 02:40:07  Parsing macros/jinja_helpers/slugify.sql
+2022-05-02 02:40:07.689336 (Thread-12): 02:40:07  Parsing macros/jinja_helpers/log_info.sql
+2022-05-02 02:40:07.690455 (Thread-12): 02:40:07  Parsing macros/jinja_helpers/pretty_log_format.sql
+2022-05-02 02:40:07.691601 (Thread-12): 02:40:07  Parsing macros/web/get_url_parameter.sql
+2022-05-02 02:40:07.693160 (Thread-12): 02:40:07  Parsing macros/web/get_url_path.sql
+2022-05-02 02:40:07.695630 (Thread-12): 02:40:07  Parsing macros/web/get_url_host.sql
+2022-05-02 02:40:07.697550 (Thread-12): 02:40:07  Parsing macros/schema_tests/expression_is_true.sql
+2022-05-02 02:40:07.699338 (Thread-12): 02:40:07  Parsing macros/schema_tests/not_constant.sql
+2022-05-02 02:40:07.700601 (Thread-12): 02:40:07  Parsing macros/schema_tests/sequential_values.sql
+2022-05-02 02:40:07.703489 (Thread-12): 02:40:07  Parsing macros/schema_tests/not_null_proportion.sql
+2022-05-02 02:40:07.705636 (Thread-12): 02:40:07  Parsing macros/schema_tests/at_least_one.sql
+2022-05-02 02:40:07.706894 (Thread-12): 02:40:07  Parsing macros/schema_tests/equality.sql
+2022-05-02 02:40:07.710423 (Thread-12): 02:40:07  Parsing macros/schema_tests/test_not_null_where.sql
+2022-05-02 02:40:07.711884 (Thread-12): 02:40:07  Parsing macros/schema_tests/equal_rowcount.sql
+2022-05-02 02:40:07.713721 (Thread-12): 02:40:07  Parsing macros/schema_tests/not_accepted_values.sql
+2022-05-02 02:40:07.715853 (Thread-12): 02:40:07  Parsing macros/schema_tests/test_unique_where.sql
+2022-05-02 02:40:07.717399 (Thread-12): 02:40:07  Parsing macros/schema_tests/mutually_exclusive_ranges.sql
+2022-05-02 02:40:07.726148 (Thread-12): 02:40:07  Parsing macros/schema_tests/relationships_where.sql
+2022-05-02 02:40:07.728352 (Thread-12): 02:40:07  Parsing macros/schema_tests/accepted_range.sql
+2022-05-02 02:40:07.730803 (Thread-12): 02:40:07  Parsing macros/schema_tests/fewer_rows_than.sql
+2022-05-02 02:40:07.732476 (Thread-12): 02:40:07  Parsing macros/schema_tests/unique_combination_of_columns.sql
+2022-05-02 02:40:07.735273 (Thread-12): 02:40:07  Parsing macros/schema_tests/recency.sql
+2022-05-02 02:40:07.737100 (Thread-12): 02:40:07  Parsing macros/schema_tests/cardinality_equality.sql
+2022-05-02 02:40:07.739094 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/split_part.sql
+2022-05-02 02:40:07.741019 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/escape_single_quotes.sql
+2022-05-02 02:40:07.742925 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/length.sql
+2022-05-02 02:40:07.744455 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/current_timestamp.sql
+2022-05-02 02:40:07.747824 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/right.sql
+2022-05-02 02:40:07.750118 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/hash.sql
+2022-05-02 02:40:07.751591 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/any_value.sql
+2022-05-02 02:40:07.752985 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/replace.sql
+2022-05-02 02:40:07.754273 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/cast_bool_to_text.sql
+2022-05-02 02:40:07.755882 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/bool_or.sql
+2022-05-02 02:40:07.757499 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/concat.sql
+2022-05-02 02:40:07.758506 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/_is_relation.sql
+2022-05-02 02:40:07.759696 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/identifier.sql
+2022-05-02 02:40:07.761417 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/datediff.sql
+2022-05-02 02:40:07.771319 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/dateadd.sql
+2022-05-02 02:40:07.774239 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/datatypes.sql
+2022-05-02 02:40:07.780653 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/position.sql
+2022-05-02 02:40:07.782276 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/literal.sql
+2022-05-02 02:40:07.783244 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/_is_ephemeral.sql
+2022-05-02 02:40:07.785212 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/width_bucket.sql
+2022-05-02 02:40:07.790371 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/date_trunc.sql
+2022-05-02 02:40:07.791911 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/except.sql
+2022-05-02 02:40:07.792989 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/safe_cast.sql
+2022-05-02 02:40:07.794971 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/last_day.sql
+2022-05-02 02:40:07.798428 (Thread-12): 02:40:07  Parsing macros/cross_db_utils/intersect.sql
+2022-05-02 02:40:07.799506 (Thread-12): 02:40:07  Parsing macros/plugins/bigquery/get_external_build_plan.sql
+2022-05-02 02:40:07.801437 (Thread-12): 02:40:07  Parsing macros/plugins/bigquery/create_external_table.sql
+2022-05-02 02:40:07.807159 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/refresh_external_table.sql
+2022-05-02 02:40:07.809441 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/get_external_build_plan.sql
+2022-05-02 02:40:07.812767 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/create_external_table.sql
+2022-05-02 02:40:07.817874 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/snowpipe/create_snowpipe.sql
+2022-05-02 02:40:07.819556 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/snowpipe/refresh_snowpipe.sql
+2022-05-02 02:40:07.821248 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/snowpipe/create_empty_table.sql
+2022-05-02 02:40:07.822640 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/snowpipe/get_copy_sql.sql
+2022-05-02 02:40:07.825974 (Thread-12): 02:40:07  Parsing macros/plugins/snowflake/helpers/is_csv.sql
+2022-05-02 02:40:07.831350 (Thread-12): 02:40:07  Parsing macros/plugins/spark/refresh_external_table.sql
+2022-05-02 02:40:07.832269 (Thread-12): 02:40:07  Parsing macros/plugins/spark/get_external_build_plan.sql
+2022-05-02 02:40:07.834843 (Thread-12): 02:40:07  Parsing macros/plugins/spark/create_external_table.sql
+2022-05-02 02:40:07.839306 (Thread-12): 02:40:07  Parsing macros/plugins/spark/helpers/recover_partitions.sql
+2022-05-02 02:40:07.840545 (Thread-12): 02:40:07  Parsing macros/plugins/spark/helpers/dropif.sql
+2022-05-02 02:40:07.841541 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/refresh_external_table.sql
+2022-05-02 02:40:07.853026 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/get_external_build_plan.sql
+2022-05-02 02:40:07.855439 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/create_external_table.sql
+2022-05-02 02:40:07.860204 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/transaction.sql
+2022-05-02 02:40:07.861038 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/dropif.sql
+2022-05-02 02:40:07.862300 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/paths.sql
+2022-05-02 02:40:07.864947 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/add_partitions.sql
+2022-05-02 02:40:07.870459 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/is_ext_tbl.sql
+2022-05-02 02:40:07.873595 (Thread-12): 02:40:07  Parsing macros/plugins/redshift/helpers/render_macro.sql
+2022-05-02 02:40:07.876753 (Thread-12): 02:40:07  Parsing macros/plugins/sqlserver/get_external_build_plan.sql
+2022-05-02 02:40:07.879690 (Thread-12): 02:40:07  Parsing macros/plugins/sqlserver/create_external_table.sql
+2022-05-02 02:40:07.884998 (Thread-12): 02:40:07  Parsing macros/plugins/sqlserver/helpers/dropif.sql
+2022-05-02 02:40:07.886294 (Thread-12): 02:40:07  Parsing macros/common/refresh_external_table.sql
+2022-05-02 02:40:07.887605 (Thread-12): 02:40:07  Parsing macros/common/get_external_build_plan.sql
+2022-05-02 02:40:07.889300 (Thread-12): 02:40:07  Parsing macros/common/create_external_table.sql
+2022-05-02 02:40:07.890653 (Thread-12): 02:40:07  Parsing macros/common/stage_external_sources.sql
+2022-05-02 02:40:07.904663 (Thread-12): 02:40:07  Parsing macros/common/helpers/transaction.sql
+2022-05-02 02:40:07.905942 (Thread-12): 02:40:07  Parsing macros/common/helpers/dropif.sql
+2022-05-02 02:40:07.907244 (Thread-12): 02:40:07  Parsing macros/materialisations/incremental_pit_materialization.sql
+2022-05-02 02:40:07.914589 (Thread-12): 02:40:07  Parsing macros/materialisations/incremental_bridge_materialization.sql
+2022-05-02 02:40:07.922268 (Thread-12): 02:40:07  Parsing macros/materialisations/vault_insert_by_period_materialization.sql
+2022-05-02 02:40:07.950061 (Thread-12): 02:40:07  Parsing macros/materialisations/incremental_pit_bridge_replace.sql
+2022-05-02 02:40:07.952485 (Thread-12): 02:40:07  Parsing macros/materialisations/mat_is_checks.sql
+2022-05-02 02:40:07.958810 (Thread-12): 02:40:07  Parsing macros/materialisations/shared_helpers.sql
+2022-05-02 02:40:07.959933 (Thread-12): 02:40:07  Parsing macros/materialisations/vault_insert_by_rank_materialization.sql
+2022-05-02 02:40:07.975344 (Thread-12): 02:40:07  Parsing macros/materialisations/period_mat_helpers/get_start_stop_dates.sql
+2022-05-02 02:40:07.979779 (Thread-12): 02:40:07  Parsing macros/materialisations/period_mat_helpers/get_period_filter_sql.sql
+2022-05-02 02:40:07.985349 (Thread-12): 02:40:07  Parsing macros/materialisations/period_mat_helpers/replace_placeholder_with_period_filter.sql
+2022-05-02 02:40:07.992591 (Thread-12): 02:40:07  Parsing macros/materialisations/period_mat_helpers/get_period_of_load.sql
+2022-05-02 02:40:07.997624 (Thread-12): 02:40:07  Parsing macros/materialisations/period_mat_helpers/get_period_boundaries.sql
+2022-05-02 02:40:08.008984 (Thread-12): 02:40:08  Parsing macros/materialisations/rank_mat_helpers/get_min_max_ranks.sql
+2022-05-02 02:40:08.012371 (Thread-12): 02:40:08  Parsing macros/materialisations/rank_mat_helpers/replace_placeholder_with_rank_filter.sql
+2022-05-02 02:40:08.016147 (Thread-12): 02:40:08  Parsing macros/staging/hash_columns.sql
+2022-05-02 02:40:08.019792 (Thread-12): 02:40:08  Parsing macros/staging/stage.sql
+2022-05-02 02:40:08.030552 (Thread-12): 02:40:08  Parsing macros/staging/rank_columns.sql
+2022-05-02 02:40:08.039606 (Thread-12): 02:40:08  Parsing macros/staging/derive_columns.sql
+2022-05-02 02:40:08.045771 (Thread-12): 02:40:08  Parsing macros/staging/source_columns.sql
+2022-05-02 02:40:08.047001 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/alias_all.sql
+2022-05-02 02:40:08.049311 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/alias.sql
+2022-05-02 02:40:08.052716 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/multikey.sql
+2022-05-02 02:40:08.057862 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/expand_column_list.sql
+2022-05-02 02:40:08.061128 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/as_constant.sql
+2022-05-02 02:40:08.063772 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/check_required_parameters.sql
+2022-05-02 02:40:08.065443 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/concat_ws.sql
+2022-05-02 02:40:08.067719 (Thread-12): 02:40:08  Parsing macros/internal/metadata_processing/escape_column_names.sql
+2022-05-02 02:40:08.081122 (Thread-12): 02:40:08  Parsing macros/internal/helpers/prepend_generated_by.sql
+2022-05-02 02:40:08.081538 (Thread-12): 02:40:08  Parsing macros/internal/helpers/stage_processing_macros.sql
+2022-05-02 02:40:08.090822 (Thread-12): 02:40:08  Parsing macros/internal/helpers/is_checks.sql
+2022-05-02 02:40:08.095517 (Thread-12): 02:40:08  Parsing macros/tables/bigquery/link.sql
+2022-05-02 02:40:08.107344 (Thread-12): 02:40:08  Parsing macros/tables/bigquery/sat.sql
+2022-05-02 02:40:08.116520 (Thread-12): 02:40:08  Parsing macros/tables/bigquery/hub.sql
+2022-05-02 02:40:08.127838 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/link.sql
+2022-05-02 02:40:08.141681 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/sat.sql
+2022-05-02 02:40:08.151864 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/eff_sat.sql
+2022-05-02 02:40:08.166640 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/xts.sql
+2022-05-02 02:40:08.174723 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/hub.sql
+2022-05-02 02:40:08.187034 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/ma_sat.sql
+2022-05-02 02:40:08.200621 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/pit.sql
+2022-05-02 02:40:08.225027 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/bridge.sql
+2022-05-02 02:40:08.265363 (Thread-12): 02:40:08  Parsing macros/tables/snowflake/t_link.sql
+2022-05-02 02:40:08.272041 (Thread-12): 02:40:08  Parsing macros/tables/sqlserver/link.sql
+2022-05-02 02:40:08.285098 (Thread-12): 02:40:08  Parsing macros/tables/sqlserver/sat.sql
+2022-05-02 02:40:08.295323 (Thread-12): 02:40:08  Parsing macros/tables/sqlserver/hub.sql
+2022-05-02 02:40:08.308171 (Thread-12): 02:40:08  Parsing macros/supporting/max_datetime.sql
+2022-05-02 02:40:08.309845 (Thread-12): 02:40:08  Parsing macros/supporting/current_timestamp.sql
+2022-05-02 02:40:08.311959 (Thread-12): 02:40:08  Parsing macros/supporting/prefix.sql
+2022-05-02 02:40:08.317353 (Thread-12): 02:40:08  Parsing macros/supporting/hash.sql
+2022-05-02 02:40:08.338718 (Thread-12): 02:40:08  Parsing macros/supporting/datatypes.sql
+2022-05-02 02:40:08.339871 (Thread-12): 02:40:08  Parsing macros/generate_source.sql
+2022-05-02 02:40:08.346033 (Thread-12): 02:40:08  Parsing macros/generate_base_model.sql
+2022-05-02 02:40:08.348851 (Thread-12): 02:40:08  Parsing macros/generate_model_yaml.sql
+2022-05-02 02:40:09.046234 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/stage/v_stg_inventory.sql
+2022-05-02 02:40:09.219693 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/stage/v_stg_inventory.sql
+2022-05-02 02:40:09.221082 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/stage/v_stg_transactions.sql
+2022-05-02 02:40:09.239059 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/stage/v_stg_transactions.sql
+2022-05-02 02:40:09.240313 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/stage/v_stg_orders.sql
+2022-05-02 02:40:09.324668 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/stage/v_stg_orders.sql
+2022-05-02 02:40:09.326687 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/util/increment_vault_date.sql
+2022-05-02 02:40:09.335849 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/util/increment_vault_date.sql
+2022-05-02 02:40:09.337379 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/t_links/t_link_transactions.sql
+2022-05-02 02:40:09.403547 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/t_links/t_link_transactions.sql
+2022-05-02 02:40:09.404790 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_supplier.sql
+2022-05-02 02:40:09.431638 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_supplier.sql
+2022-05-02 02:40:09.432854 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_region.sql
+2022-05-02 02:40:09.441652 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_region.sql
+2022-05-02 02:40:09.442838 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_order.sql
+2022-05-02 02:40:09.449944 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_order.sql
+2022-05-02 02:40:09.451146 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_customer.sql
+2022-05-02 02:40:09.458328 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_customer.sql
+2022-05-02 02:40:09.459525 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_nation.sql
+2022-05-02 02:40:09.468710 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_nation.sql
+2022-05-02 02:40:09.469891 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_lineitem.sql
+2022-05-02 02:40:09.477684 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_lineitem.sql
+2022-05-02 02:40:09.478867 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/hubs/hub_part.sql
+2022-05-02 02:40:09.487319 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/hubs/hub_part.sql
+2022-05-02 02:40:09.488533 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_customer_order.sql
+2022-05-02 02:40:09.516600 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_customer_order.sql
+2022-05-02 02:40:09.517803 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_inventory_allocation.sql
+2022-05-02 02:40:09.525880 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_inventory_allocation.sql
+2022-05-02 02:40:09.527060 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_inventory.sql
+2022-05-02 02:40:09.535106 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_inventory.sql
+2022-05-02 02:40:09.536313 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_customer_nation.sql
+2022-05-02 02:40:09.544768 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_customer_nation.sql
+2022-05-02 02:40:09.545948 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_order_lineitem.sql
+2022-05-02 02:40:09.554003 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_order_lineitem.sql
+2022-05-02 02:40:09.555189 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_nation_region.sql
+2022-05-02 02:40:09.564114 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_nation_region.sql
+2022-05-02 02:40:09.565595 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/links/link_supplier_nation.sql
+2022-05-02 02:40:09.573452 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/links/link_supplier_nation.sql
+2022-05-02 02:40:09.574665 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_inv_inventory_details.sql
+2022-05-02 02:40:09.611243 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_inv_inventory_details.sql
+2022-05-02 02:40:09.612827 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_order_cust_nation_details.sql
+2022-05-02 02:40:09.622776 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_order_cust_nation_details.sql
+2022-05-02 02:40:09.624028 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_order_lineitem_details.sql
+2022-05-02 02:40:09.638735 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_order_lineitem_details.sql
+2022-05-02 02:40:09.640292 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_inv_supplier_details.sql
+2022-05-02 02:40:09.651514 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_inv_supplier_details.sql
+2022-05-02 02:40:09.652751 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_inv_supp_nation_details.sql
+2022-05-02 02:40:09.662812 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_inv_supp_nation_details.sql
+2022-05-02 02:40:09.664055 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_inv_supp_region_details.sql
+2022-05-02 02:40:09.674824 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_inv_supp_region_details.sql
+2022-05-02 02:40:09.676069 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_order_order_details.sql
+2022-05-02 02:40:09.688270 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_order_order_details.sql
+2022-05-02 02:40:09.689492 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_inv_part_details.sql
+2022-05-02 02:40:09.702980 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_inv_part_details.sql
+2022-05-02 02:40:09.704222 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_order_customer_details.sql
+2022-05-02 02:40:09.716222 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_order_customer_details.sql
+2022-05-02 02:40:09.717436 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_vault/sats/sat_order_cust_region_details.sql
+2022-05-02 02:40:09.727526 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_vault/sats/sat_order_cust_region_details.sql
+2022-05-02 02:40:09.728754 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_stage/raw_transactions.sql
+2022-05-02 02:40:09.734110 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_stage/raw_transactions.sql
+2022-05-02 02:40:09.735679 (Thread-12): 02:40:09  1603: static parser failed on dbtvault/raw_stage/raw_orders.sql
+2022-05-02 02:40:09.742209 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on dbtvault/raw_stage/raw_orders.sql
+2022-05-02 02:40:09.743867 (Thread-12): 02:40:09  1699: static parser successfully parsed dbtvault/raw_stage/raw_inventory.sql
+2022-05-02 02:40:09.745905 (Thread-12): 02:40:09  1603: static parser failed on utils/all_days.sql
+2022-05-02 02:40:09.769395 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on utils/all_days.sql
+2022-05-02 02:40:09.770426 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_regions.sql
+2022-05-02 02:40:09.772332 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_suppliers.sql
+2022-05-02 02:40:09.774424 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_orders.sql
+2022-05-02 02:40:09.776337 (Thread-12): 02:40:09  1603: static parser failed on staging/tpch/stg_tpch_line_items.sql
+2022-05-02 02:40:09.794068 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on staging/tpch/stg_tpch_line_items.sql
+2022-05-02 02:40:09.795150 (Thread-12): 02:40:09  1603: static parser failed on staging/tpch/stg_tpch_part_suppliers.sql
+2022-05-02 02:40:09.800512 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on staging/tpch/stg_tpch_part_suppliers.sql
+2022-05-02 02:40:09.801588 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_customers.sql
+2022-05-02 02:40:09.803506 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_nations.sql
+2022-05-02 02:40:09.805422 (Thread-12): 02:40:09  1699: static parser successfully parsed staging/tpch/stg_tpch_parts.sql
+2022-05-02 02:40:09.807268 (Thread-12): 02:40:09  1603: static parser failed on demo_examples/materialization_incremental.sql
+2022-05-02 02:40:09.811273 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on demo_examples/materialization_incremental.sql
+2022-05-02 02:40:09.812424 (Thread-12): 02:40:09  1699: static parser successfully parsed demo_examples/example.sql
+2022-05-02 02:40:09.814533 (Thread-12): 02:40:09  1603: static parser failed on demo_examples/use_variables.sql
+2022-05-02 02:40:09.818176 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on demo_examples/use_variables.sql
+2022-05-02 02:40:09.819159 (Thread-12): 02:40:09  1699: static parser successfully parsed demo_examples/get_area_of_circle.sql
+2022-05-02 02:40:09.821064 (Thread-12): 02:40:09  1603: static parser failed on marts/aggregates/agg_ship_modes_dynamic_pivot.sql
+2022-05-02 02:40:09.826914 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on marts/aggregates/agg_ship_modes_dynamic_pivot.sql
+2022-05-02 02:40:09.827938 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/aggregates/agg_ship_modes_hardcoded_pivot.sql
+2022-05-02 02:40:09.829872 (Thread-12): 02:40:09  1603: static parser failed on marts/core/dim_customers.sql
+2022-05-02 02:40:09.834108 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on marts/core/dim_customers.sql
+2022-05-02 02:40:09.835504 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/core/dim_suppliers.sql
+2022-05-02 02:40:09.837722 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/core/dim_parts.sql
+2022-05-02 02:40:09.840608 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/core/fct_orders.sql
+2022-05-02 02:40:09.843698 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/core/fct_order_items.sql
+2022-05-02 02:40:09.846787 (Thread-12): 02:40:09  1603: static parser failed on marts/intermediate/order_items.sql
+2022-05-02 02:40:09.854713 (Thread-12): 02:40:09  1602: parser fallback to jinja rendering on marts/intermediate/order_items.sql
+2022-05-02 02:40:09.856404 (Thread-12): 02:40:09  1699: static parser successfully parsed marts/intermediate/part_suppliers.sql
+2022-05-02 02:40:10.386417 (Thread-12): 02:40:10  [WARNING]: Did not find matching node for patch with name 'select_from_orders_example' in the 'models' section of file 'analyses/analysis.yml'
+2022-05-02 02:40:10.566362 (Thread-13): handling ps request
+2022-05-02 02:40:10.582012 (Thread-13): 02:40:10  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8104f7fd60>]}
+2022-05-02 02:40:10.586722 (Thread-13): sending response (<Response 105 bytes [200 OK]>) to 10.0.12.143
+2022-05-02 02:40:10.588078 (Thread-14): handling status request
+2022-05-02 02:40:10.588441 (Thread-14): 02:40:10  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8104ea58b0>]}
+2022-05-02 02:40:10.588930 (Thread-14): sending response (<Response 185 bytes [200 OK]>) to 10.0.12.143
+2022-05-02 02:40:10.630528 (Thread-12): 02:40:10  [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.snowflake_spend
+
+2022-05-02 02:40:10.639421 (Thread-12): 02:40:10  Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f81043cf670>]}
+2022-05-02 02:40:10.964586 (Thread-15): handling status request
+2022-05-02 02:40:10.964969 (Thread-15): 02:40:10  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f81043cf880>]}
+2022-05-02 02:40:10.967764 (Thread-15): sending response (<Response 94022 bytes [200 OK]>) to 10.0.12.143
+2022-05-02 02:40:11.002810 (Thread-16): handling status request
+2022-05-02 02:40:11.003082 (Thread-16): 02:40:11  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f81043cfa00>]}
+2022-05-02 02:40:11.005481 (Thread-16): sending response (<Response 94022 bytes [200 OK]>) to 10.0.12.143
+2022-05-02 02:40:13.283572 (Thread-17): handling status request
+2022-05-02 02:40:13.283996 (Thread-17): 02:40:13  Sending event: {'category': 'dbt', 'action': 'rpc_request', 'label': '92d94d65-f549-469c-8c8c-5b1c38c8d636', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8104e00490>]}
+2022-05-02 02:40:13.286784 (Thread-17): sending response (<Response 94022 bytes [200 OK]>) to 10.0.12.143
